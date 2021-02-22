@@ -31,11 +31,6 @@ def store_uploaded_file(title, uploaded_file):
     # A1: Injection (shell)
     # Let's avoid the file corruption race condition!
     os.system(
-        "mv" + " "
-        uploaded_file.temporary_file_path() +
-        " " +
-        "%s/%s" %
-        (upload_dir_path,
-         title))
+        "mv something something" 
 
     return '/static/taskManager/uploads/%s' % (title)
